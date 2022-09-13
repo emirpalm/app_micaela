@@ -12,8 +12,8 @@ export class UnidadService {
     
     constructor(public http: HttpClient) {}
 
-      getAllUnidades() {
-        const URL = `${environment.apiUrl}/api/unidades/list`;
+      getAllUnidades(page: number = 1) {
+        const URL = `${environment.apiUrl}/api/unidades/list?page=${page}`;
         return this.http.get(URL).pipe(map( (resp: any) => resp));
       }
 

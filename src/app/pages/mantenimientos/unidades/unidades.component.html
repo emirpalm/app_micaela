@@ -37,7 +37,7 @@
 
                 <div class="row">
                     <div class="col-8">
-                        <h4 class="card-title">Unidades </h4>
+                        <h4 class="card-title">Unidades ({{this.total}})</h4>
                         <h6 class="card-subtitle">Unidades registrados en mi aplicación</h6>
                     </div>
                     <div class="col">
@@ -97,9 +97,9 @@
                     </table>
                 </div>
 
-                <button class="btn btn-secondary">Anteriores</button>
+                <button (click)="changePage(-1)" class="btn btn-secondary">Anteriores</button>
                 &nbsp;
-                <button class="btn btn-secondary">Siguientes</button>
+                <button (click)="changePage(1)" class="btn btn-secondary">Siguientes</button>
 
             </div>
         </div>

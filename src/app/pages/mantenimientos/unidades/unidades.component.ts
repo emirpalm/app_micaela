@@ -12,6 +12,8 @@ export class UnidadesComponent implements OnInit {
 
   public unidades: Unidades[] = [];
   public cargando: boolean = true;
+  public total: number = 0;
+  public page: number = 1;
 
   constructor(private unidadesService: UnidadService, private busquedaService: BusquedasService) { }
 
@@ -31,11 +33,12 @@ export class UnidadesComponent implements OnInit {
     } );
   }
 
-  cargarUnidades() {
+  cargarUnidades(page: number = 1) {
     this.cargando = true;
-    this.unidadesService.getAllUnidades()
+    this.unidadesService.getAllUnidades(page)
     .subscribe( (resp: any) => {
-      this.unidades = resp;
+      this.unidades = resp.rows;
+      this.total = resp.count;
       this.cargando = false;
     } );
   }
@@ -112,6 +115,18 @@ export class UnidadesComponent implements OnInit {
     })
   }
 });
+  }
+
+  changePage(value: number) {
+    this.page += value;
+    const limit = Math.ceil(this.total/5);
+    console.log(limit);
+    if(this.page < 1) {
+      this.page = 1;
+    } else if (this.page > limit) {
+      this.page -= value;
+    }
+    this.cargarUnidades(this.page);
   }
 
 }

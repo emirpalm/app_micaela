@@ -5,6 +5,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import {
     SidebarService,
     UnidadService,
+    AreaService,
     BusquedasService
    } from './service.index';
 
@@ -17,6 +18,7 @@ import {
     providers: [
         SidebarService,
         UnidadService,
+        AreaService,
         BusquedasService
     ],
     declarations: []
