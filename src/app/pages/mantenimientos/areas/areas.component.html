@@ -5,7 +5,7 @@
                 
                 <input type="text"
                         class="form-control"
-                        placeholder="Buscar Unidad..."
+                        placeholder="Buscar Area..."
                         #txtTermino
                         (keyup)="searchArea(txtTermino.value)"/>
 
@@ -37,8 +37,8 @@
 
                 <div class="row">
                     <div class="col-8">
-                        <h4 class="card-title">Unidades ({{this.total}})</h4>
-                        <h6 class="card-subtitle">Unidades registrados en mi aplicación</h6>
+                        <h4 class="card-title">Areas ({{this.total}})</h4>
+                        <h6 class="card-subtitle">Areas registrados en mi aplicación</h6>
                     </div>
                     <div class="col">
                         <div class="text-right">
@@ -46,7 +46,7 @@
                             (click)="openModalCreateArea()"
                                     >
                                 <i class="fa fa-plus"></i>
-                                Crear Unidad
+                                Crear Area
                             </button>
                         </div>
                     </div>

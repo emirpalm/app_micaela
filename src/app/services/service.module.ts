@@ -6,6 +6,7 @@ import {
     SidebarService,
     UnidadService,
     AreaService,
+    SubAreaService,
     BusquedasService
    } from './service.index';
 
@@ -19,6 +20,7 @@ import {
         SidebarService,
         UnidadService,
         AreaService,
+        SubAreaService,
         BusquedasService
     ],
     declarations: []
