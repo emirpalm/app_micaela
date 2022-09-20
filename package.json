@@ -8,12 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "engines": {
-    "node": "8.5.3",
-    "npm": "18.7.0"
-  },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~14.1.1",
+    "@angular/compiler-cli": "^14.1.0",
     "@angular/animations": "^14.1.0",
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
@@ -29,8 +27,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.1.1",
-    "@angular/cli": "~14.1.1",
-    "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
