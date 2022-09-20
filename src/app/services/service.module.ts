@@ -7,6 +7,7 @@ import {
     UnidadService,
     AreaService,
     SubAreaService,
+    ProductoService,
     BusquedasService
    } from './service.index';
 
@@ -21,6 +22,7 @@ import {
         UnidadService,
         AreaService,
         SubAreaService,
+        ProductoService,
         BusquedasService
     ],
     declarations: []
