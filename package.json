@@ -4,10 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node app.js",
-    "build": "ng build",
+    "build": "ng build --configuration production --aot",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "postinstall": "ng build --configuration production --aot && mv dist/* ."
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
