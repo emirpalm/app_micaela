@@ -4,6 +4,9 @@ import { environment } from '../../../environments/environment';
 import { map } from 'rxjs/operators';
 
 import { Unidades } from '../../models/unidades.models';
+import { SubAreas } from '../../models/subareas.models';
+import { Areas } from '../../models/areas.models';
+import { Productos } from '../../models/productos.models';
 
 const base_url = environment.apiUrl;
 
@@ -29,9 +32,33 @@ export class BusquedasService {
 
   
 
-  private transformarUnidad( resultados: any[] ) {
-    return resultados;  
+  private transformarUnidad( resultados: any[] ): Unidades[]  {
+    return resultados;
+   
   }
+
+  private transformarSubAreas( resultados: any[] ): SubAreas[]  {
+    return resultados;
+   
+  }
+
+  private transformarAreas( resultados: any[] ): Areas[]  {
+    return resultados;
+   
+  }
+
+  private transformarProductos( resultados: any[] ): Productos[]  {
+    return resultados;
+   
+  }
+
+  busquedaGlobal( termino: string ) {
+
+    const url = `${ base_url }/api/all/search/${ termino }`;
+    return this.http.get(url);
+
+  }
+
 
  
   buscar( 
@@ -47,6 +74,12 @@ export class BusquedasService {
                 switch ( tipo ) {
                   case 'unidades':
                     return this.transformarUnidad( resp.resultados );
+                  case 'subareas':
+                    return this.transformarSubAreas( resp.resultados );
+                  case 'areas':
+                    return this.transformarAreas( resp.resultados );
+                  case 'productos':
+                    return this.transformarProductos( resp.resultados );
                 
                   default:
                     return [];

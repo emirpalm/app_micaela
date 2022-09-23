@@ -1,0 +1,143 @@
+<div class="row animated fadeIn fast">
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>Productos</h3>
+
+                <div class="alert alert-info animated fadeIn fast"
+                    *ngIf="productos.length === 0">
+                  <p class="mb-0">
+                      No hay producto con ese término
+                  </p>
+                </div>
+
+                <div class="table-responsive"
+                    *ngIf="productos.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let producto of productos"
+                                class="animated fadeIn fast">
+                                <td>{{ producto.nombre }}</td>
+                                <td>{{ producto.precio }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>Areas</h3>
+
+                <div class="alert alert-info animated fadeIn fast"
+                    *ngIf="areas.length === 0">
+                  <p class="mb-0">
+                      No hay un Area con ese término
+                  </p>
+                </div>
+
+                <div class="table-responsive"
+                    *ngIf="areas.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let area of areas"
+                                class="animated fadeIn fast">
+                                <td>{{ area.nombre }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>SubAreas</h3>
+
+                <div class="alert alert-info animated fadeIn fast"
+                    *ngIf="subAreas.length === 0">
+                  <p class="mb-0">
+                      No hay una SubArea con ese término
+                  </p>
+                </div>
+
+                <div class="table-responsive"
+                    *ngIf="subAreas.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let subArea of subAreas"
+                                class="animated fadeIn fast">
+                                <td>{{ subArea.nombre }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>Unidades</h3>
+
+                <div class="alert alert-info animated fadeIn fast"
+                    *ngIf="unidades.length === 0">
+                  <p class="mb-0">
+                      No hay una Unidad con ese término
+                  </p>
+                </div>
+
+                <div class="table-responsive"
+                    *ngIf="unidades.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let unidad of unidades"
+                                class="animated fadeIn fast">
+                                <td>{{ unidad.nombre }}</td>
+                                <td>{{ unidad.descripcion }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div> 
